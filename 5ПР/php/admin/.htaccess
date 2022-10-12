@@ -1,0 +1,5 @@
+RewriteEngine on
+AuthName "Restricted access"
+AuthType Basic
+AuthUserFile .htpasswd
+Require valid-user

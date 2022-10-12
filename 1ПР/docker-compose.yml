@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+    db:
+        image: "mysql:latest"
+        command: --default-authentication-plugin=mysql_native_password
+        restart: always
+        environment:
+          MYSQL_ROOT_PASSWORD: 1
+        volumes:
+          - ./DB:/docker-entrypoint-initdb.d
+        ports:
+          - "3306"
+    php:
+        build:
+            context: ./Main
+        ports:
+            - 8080:80

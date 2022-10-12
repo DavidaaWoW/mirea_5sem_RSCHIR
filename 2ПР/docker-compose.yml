@@ -1,0 +1,18 @@
+version: "3.8"
+services:
+    drawer:
+        build:
+            context: ./drawer
+        ports:
+            - 8000:80
+            
+    sort:
+        build:
+            context: ./sort
+        ports:
+            - 8001:80
+    admin:
+        build:
+            context: ./admin
+        ports:
+            - 8002:80
