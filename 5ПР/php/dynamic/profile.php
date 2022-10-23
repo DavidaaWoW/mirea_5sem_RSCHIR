@@ -84,11 +84,10 @@ if (isset($_FILES['formFile'])) {
         <h1 style="margin: 1em;" id="setLanguage">Set language:</h1>
         <button class="btn btn-secondary" style="margin: 1em; margin-left:5em;" onclick="setRussian()">Русский</button>
         <button class="btn btn-secondary" style="margin: 1em;" onclick="setEnglish()">English</button> <br></br>
-        <h1 style="margin: 1em">Загрузить PDF файл с водительской лицензией</h1>
+        <h1 style="margin: 1em" id="pdfLoad">Загрузить PDF файл с водительской лицензией</h1>
         <form action="profile.php" enctype="multipart/form-data" method="post" style="max-width: 20em; margin-left: 5em">
-            <label for="formFile" class="form-label">Default file input example</label>
             <input class="form-control" type="file" id="formFile" name="formFile" style="margin-bottom: 1em;">
-            <input type="submit" class="btn btn-success" value="Отправить">
+            <input type="submit" class="btn btn-success" id="pdfLoadBtn" value="Отправить">
         </form>
         <a href="/logout.php"><button class="btn btn-danger" id="logout" style="margin: 1em; margin-left:5em; margin-top: 5em">Выйти</button></a>
     </div>

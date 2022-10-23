@@ -17,6 +17,8 @@ let navbarBrands = document.getElementById("navbarBrands");
 let navbarContacts = document.getElementById("navbarContacts");
 let cards = document.getElementsByClassName("card");
 let cardListBtn = document.getElementsByClassName("cardListBtn");
+let loadPdfHeader = document.getElementById("pdfLoad");
+let loadPdfButton = document.getElementById("pdfLoadBtn");
 if (theme == "dark") {
 background.style.backgroundColor = "grey";
 [...headers].forEach((element) => {
@@ -44,6 +46,8 @@ if (language == "russian") {
 try{
 setTheme.innerHTML = "Установить тему";
 setLanguage.innerHTML = "Установить язык";
+loadPdfHeader.innerHTML = "Загрузить PDF файл с водительской лицензией";
+pdfLoadBtn.value = "Отправить";
 logout.innerHTML = "Выйти";
 }
 catch(e){}
@@ -60,6 +64,8 @@ navbarContacts.innerHTML = "Контакты";
 try{
 setTheme.innerHTML = "Set theme";
 setLanguage.innerHTML = "Set language";
+loadPdfHeader.innerHTML = "Load PDF file with drivers licence";
+pdfLoadBtn.value = "Submit";
 logout.innerHTML = "Logout";
 }
 catch(e){}
